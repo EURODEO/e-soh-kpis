@@ -1,1 +1,32 @@
 placeholder for end-result document about KPI's - please feel free to add/fill
+
+KPI's with regard to data consumers
+- Availability of API-service  - uptime %
+- API response time - average API requests response time
+- API error rate - This measures the percentage of requests that result in errors.
+- Number of unique API users 
+- Amount of data transferred via JSON
+- Amount of data downloaded with file download
+- Download rate
+- Download success
+- Amount of NMH's with data available via the API
+- Total amount of data available
+- Amount of Weather Stations available via the API
+
+KPI's with regard to data ingest
+- System uptime %
+- Ingestion success rate - the percentage of data that is successfully ingested
+- Ingestion time
+- Data transformation success rate - the percentage of BUFR files that is successfully transformed by the system
+
+
+KPI's with regard to software robustness -
+- Meantime to recovery - MTTR
+- Mean time to failure - MTTF???
+- Average issue handle time 
+
+KPI's with regard to metadata
+=> see link MOrten
+
+KPI's in relation to observing networks
+=> Stewart? I thought you mentioned you have some ideas about his
