@@ -19,7 +19,6 @@ KPI's with regard to data ingest
 - Ingestion time
 - Data transformation success rate - the percentage of BUFR files that is successfully transformed by the system
 
-
 KPI's with regard to software robustness -
 - Meantime to recovery - MTTR
 - Mean time to failure - MTTF???
