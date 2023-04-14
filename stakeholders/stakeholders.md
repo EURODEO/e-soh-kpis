@@ -1,5 +1,12 @@
 # Stakeholders
 
+Important stakeholders are:
+- RODEO partners and RODEO workpackages, especially Workpackage 3 User Interface
+- EUMETNET 
+- EU HVD 
+- FEMDI Expert Team
+
+## KPI's
 - Number of unique API users 
 - Number of API calls in a month
 - Source of API calls 
