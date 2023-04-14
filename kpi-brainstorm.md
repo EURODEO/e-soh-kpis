@@ -1,39 +1,16 @@
 Placeholder for end-result document about KPI's - please feel free to add/fill
 
-KPI's with regard to data consumers
-
-- Availability of API-service  - uptime %
-- API response time - average API requests response time
-- API error rate - This measures the percentage of requests that result in errors.
-- Number of unique API users 
-- Amount of data transferred via JSON
-- Amount of data downloaded with file download
-- Download rate
-- Download success
-- Amount of NMH's with data available via the API
-- Total amount of data available
-- Amount of Weather Stations available via the API
+[KPI's with regard to data consumers](https://github.com/EURODEO/e-soh-kpis/blob/main/data-consumers/data-consumers.md)
 
 KPI's with regard to pubsub performance
 
 - TBD
 
-KPI's with regard to metadata
+[KPI's with regard to metadata](https://github.com/EURODEO/e-soh-kpis/blob/main/data-and-metadata/data-and-metadata.md)
 
-=> see link MOrten
+[KPI's with regard to data ingest](https://github.com/EURODEO/e-soh-kpis/blob/main/ingest/ingest.md)
 
-KPI's with regard to data ingest
-
-- System uptime %
-- Ingestion success rate - the percentage of data that is successfully ingested
-- Ingestion time
-- Data transformation success rate - the percentage of BUFR files that is successfully transformed by the system
-
-KPI's with regard to software robustness
-
-- Meantime to recovery - MTTR
-- Mean Time Between Failures - MTBF
-- Average issue handle time
+[KPI's with regard to software robustness](https://github.com/EURODEO/e-soh-kpis/blob/main/software/software.md)
 
 KPI's in relation to observing networks
 
