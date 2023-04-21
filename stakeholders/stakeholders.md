@@ -1,7 +1,7 @@
 # Stakeholders
 
 |ID|KPI|Description|Target|Notes|
-|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|
 |SH-1|Number of API requests|Number of API requests|TBD|TBD after start of operations or used as monitoring without specific target|
 |SH-2|Number of unique API users|Estimation of number of unique users|TBD|If can be measured via registration or using fingerprint (e.g. combination of IP address, user-agent, operating system, and referrer). TBD after start of operations|
 |SH-3|Number of data providing organisations|(Mainly) NMHSs providing data in E-SOH|31||
