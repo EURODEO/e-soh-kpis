@@ -1,7 +1,7 @@
 # Data Consumers
 
 |ID|KPI|Description|Target|Notes|
-|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|
 |OD-1|API availability|API availability measured from independent system. If possible, it's beneficial to check the response code and/or that the response contain expected data.|99.9%|Related to requirement F02|
 |OD-2|API response time|How fast API starts the response.|||
 |OD-3|API download rate|Data download rate|||
