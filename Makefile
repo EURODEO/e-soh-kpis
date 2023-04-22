@@ -21,8 +21,6 @@ pandoc:
 	echo "" >> pandoc.TMP
 	cat data-and-metadata/data-and-metadata.md >> pandoc.TMP
 	echo "" >> pandoc.TMP
-	cat conclusion/conclusion.md >> pandoc.TMP
-	echo "" >> pandoc.TMP
 	$(PANDOC) -s -N -B pandoc-heading.TMP --metadata title="E-SOH KPIs document" --toc --toc-depth=2 -c pandoc.css -f markdown -t html pandoc.TMP > $(HTMLFILE)
 	rm pandoc.TMP
 	rm pandoc-heading.TMP
