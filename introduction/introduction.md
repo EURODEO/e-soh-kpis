@@ -10,5 +10,6 @@ In the process of establishing the KPIs we took in consideration the following s
 - EUMETSAT data services KPIs: https://www.eumetsat.int/media/45745 (pp. 105-107)
 - OSCAR rquirements: https://space.oscar.wmo.int/requirements
 - WIS 2.0 Technical requirements: https://community.wmo.int/en/WIS2_Technical_Specification_Guidance
+- WIS Metadata Key Performance Indicators: https://community.wmo.int/en/activity-areas/wis/wis-metadata-kpis
 - DWD Opera KPI's
 - KNMI KDP KPI's
