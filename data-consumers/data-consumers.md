@@ -25,4 +25,4 @@ Initially E-SOH will only support 99% availability because support is only avail
 KPI-2 and KPI-3 target should be derived from time-critical applications such as thunderstorm monitoring or marine traffic control (just to name some examples). Notably, open data API is **not to provide** QoS promise for the end user applications but to exchange data. 
 
 
-KPI-5 Number of unique API users. Can this be measured???
+KPI-5 Number of unique API users. If this can be measured via registration or using fingerprint (e.g. combination of IP address, user-agent, operating system, and referrer). TBD after start of operations
