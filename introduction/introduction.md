@@ -13,3 +13,4 @@ In the process of establishing the KPIs we took in consideration the following s
 - WIS Metadata Key Performance Indicators: https://community.wmo.int/en/activity-areas/wis/wis-metadata-kpis
 - DWD Opera KPI's
 - KNMI KDP KPI's
+- A Performance Benchmarking Methodology for MQTT Broker Implementations: https://qrs20.techconf.org/QRSC2020_FULL/pdfs/QRS-C2020-4QOuHkY3M10ZUl1MoEzYvg/891500a499/891500a499.pdf
