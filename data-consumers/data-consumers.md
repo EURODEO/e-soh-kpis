@@ -4,7 +4,7 @@ Data consumers KPIs define the targets from the perspective of the data consumer
 
 |ID   |KPI|Description|Target|Notes|
 |-----|---|---|---|---|
-|KPI-1|API availability|API availability measured from independent system. Initially only 99% because of office hours support.|99%|Related to requirement F02|
+|KPI-1|API availability|API availability measured from independent system. Consists of availability, completeness... Initially only 99% because of office hours support. |99%|Related to requirement F02|
 |KPI-2|API response time|How fast API starts the response.|||
 |KPI-3|Number of API requests|The number API requests reflect the usability of the service|||
 |KPI-4|Amount of data downloaded|The amount of data downloaded indicates the usability of the data|||
