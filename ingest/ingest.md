@@ -5,7 +5,7 @@ The KPIs in this section define the targets of the system seen from the perspect
 |ID|KPI|Description|Target|Notes|
 |---|---|---|---|---|
 |KPI-11|Amount of data ingested|||
-|KPI-12|Ingestion system uptime||99%||
+|KPI-12|Ingestion system uptime|The uptime of the ingestion system|99%|Please note: this can be different than the uptime of the API for the end-user|
 |KPI-13|Ingestion success rate|The percentage of data succesfully ingested|99.95%||
 |KPI-14|Ingestion timeliness|Processing time from "inserted in system" to "notification send out to destination"|< 5 min delay||
 |KPI-15|Data transformation success rate|The percentage of BUFR and CSV files that is succesfully transformed by the system|100%||
