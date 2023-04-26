@@ -1,12 +1,14 @@
 # Data Ingest
 
+The KPIs in this section define the targets of the system seen from the perspective of de data providers, i.e. the NMHS's.
+
 |ID|KPI|Description|Target|Notes|
 |---|---|---|---|---|
-|KPI-11|Amount of data ingested|
+|KPI-11|Amount of data ingested|||
 |KPI-12|Ingestion system uptime||99%||
 |KPI-13|Ingestion success rate|The percentage of data succesfully ingested|99.95%||
 |KPI-14|Ingestion timeliness|Processing time from "inserted in system" to "notification send out to destination"|< 5 min delay||
-|KPI-15|Data transformation success rate|The percentage of BUFR files that is succesfully transformed by the system|100%||
+|KPI-15|Data transformation success rate|The percentage of BUFR and CSV files that is succesfully transformed by the system|100%||
 
 ## Discussion
 
