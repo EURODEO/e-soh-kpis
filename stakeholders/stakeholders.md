@@ -1,6 +1,6 @@
 # Stakeholders
 
-This section describe the KPIs that define the target from the perspective of the important stakeholders. 
+This section describes the KPIs that define the target from the perspective of the important stakeholders. 
 Most important identified stakeholders are:
 - RODEO project and partners
 - EUMETNET, including FEMDI Expert Team 
