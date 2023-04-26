@@ -9,7 +9,7 @@ KPIs should not be confused with requirements nor monitoring. Requirements defin
 In the process of establishing the KPIs the following sources and examples are taken into consideration:
 - EUMETSAT data services KPIs: https://www.eumetsat.int/media/45745 (pp. 105-107)
 - OSCAR rquirements: https://space.oscar.wmo.int/requirements
-- EUCOS Performance Standards: Availble from the EUMETNET Portal (SharePoint) https://tlnt19059.sharepoint.com/:w:/r/sites/OBSERVATIONSPROGRAMMEMANAGEMENT/Documentation/Reference/EUCOS-Performance-Standard.docx?d=w311f059736f744bcb83037c362e5d3e2&csf=1&web=1&e=AzDctr
+- EUCOS Performance Standards: Availble from the EUMETNET Portal (SharePoint) Section 2. https://tlnt19059.sharepoint.com/:w:/r/sites/OBSERVATIONSPROGRAMMEMANAGEMENT/Documentation/Reference/EUCOS-Performance-Standard.docx?d=w311f059736f744bcb83037c362e5d3e2&csf=1&web=1&e=AzDctr
 - WIS 2.0 Technical requirements: https://community.wmo.int/en/WIS2_Technical_Specification_Guidance
 - WIS Metadata Key Performance Indicators: https://community.wmo.int/en/activity-areas/wis/wis-metadata-kpis
 - DWD Opera KPI's
