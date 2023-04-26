@@ -5,6 +5,8 @@ Most important identified stakeholders are:
 - RODEO project and partners
 - EUMETNET, including FEMDI Expert Team 
 
+Requirement F07 states that the EUMETNET members want monthly, quarterly, and annual reports of the performance, against (to be confirmed) agreed KPIs.
+
 |ID|KPI|Description|Target|Notes|
 |---|---|---|---|---|
 |KPI-9|Number of data providing organisations|(Mainly) NMHSs providing data in E-SOH|31||
