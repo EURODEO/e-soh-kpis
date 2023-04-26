@@ -1,6 +1,6 @@
 # Data Ingest
 
-The KPIs in this section define the targets of the system seen from the perspective of de data providers, i.e. the NMHS's.
+The KPIs in this section define the targets of the system seen from the perspective of the data providers, i.e. the NMHS's.
 
 |ID|KPI|Description|Target|Notes|
 |---|---|---|---|---|
