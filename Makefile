@@ -11,13 +11,11 @@ pandoc:
 	echo "<p>Github repository: <a href=\"https://github.com/EURODEO/e-soh-kpis\">https://github.com/EURODEO/e-soh-kpis</a></p>" >> pandoc-heading.TMP	
 	cat introduction/introduction.md > pandoc.TMP
 	echo "" >> pandoc.TMP
-	cat stakeholders/stakeholders.md >> pandoc.TMP
-	echo "" >> pandoc.TMP
 	cat data-consumers/data-consumers.md >> pandoc.TMP
 	echo "" >> pandoc.TMP
-	cat ingest/ingest.md >> pandoc.TMP
+	cat stakeholders/stakeholders.md >> pandoc.TMP
 	echo "" >> pandoc.TMP
-	cat software/software.md >> pandoc.TMP
+	cat ingest/ingest.md >> pandoc.TMP
 	echo "" >> pandoc.TMP
 	cat data-and-metadata/data-and-metadata.md >> pandoc.TMP
 	echo "" >> pandoc.TMP
