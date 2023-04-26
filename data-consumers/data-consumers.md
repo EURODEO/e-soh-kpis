@@ -5,15 +5,15 @@ Data consumers KPIs define the targets from the perspective of the data consumer
 |ID   |KPI|Description|Target|Notes|
 |-----|---|---|---|---|
 |KPI-1|API availability|API availability measured from independent system. The check has to request for latest data and ensure that the returned data is what's expected. Initially only 99% because of office hours support. |99%|Related to requirement F02|
-|KPI-2|API response time|How fast API starts the response.|||
-|KPI-3|Number of API requests|The number API requests reflect the usability of the service|||
-|KPI-4|Amount of data downloaded|The amount of data downloaded indicates the usability of the data|||
-|KPI-5|Number of unique API users|The number of unique users|||
-|KPI-6|Number of subscribers to the notification service|Number of subscriptions to MQTT pub/sub notifications|||
-|KPI-7|Number of successfully processed PUBLISH messages|Succesfully processed MQTT notifications|||
-|KPI-8|Publish delay|the time interval starts when a PUBLISH message is sent and ends when the corresponding PUBACK (QoS1) message has been received|||
+|KPI-2|API response time|How fast API starts the response.|TBD||
+|KPI-3|Number of API requests|The number API requests reflect the usability of the service|TBD||
+|KPI-4|Amount of data downloaded|The amount of data downloaded indicates the usability of the data|TBD||
+|KPI-5|Number of unique API users|The number of unique users|TBD||
+|KPI-6|Number of subscribers to the notification service|Number of subscriptions to MQTT pub/sub notifications|TBD||
+|KPI-7|Number of successfully processed PUBLISH messages|Succesfully processed MQTT notifications|TBD||
+|KPI-8|Publish delay|the time interval starts when a PUBLISH message is sent and ends when the corresponding PUBACK (QoS1) message has been received|TBD||
 
-
+KPIs 6-8 on the MQTT pub/sub mechanism also depend on the overall FEMDI Architecture and especially RODEO Work Package 2.
 
 ## Discussion
 
