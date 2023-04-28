@@ -1,5 +1,5 @@
 SHELL := /bin/bash
-PANDOC = /usr/bin/pandoc
+PANDOC = pandoc
 HTMLFILE = e-soh-kpis-doc.html
 BROWSER = chromium
 
