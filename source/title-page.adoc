@@ -1,0 +1,24 @@
+= E-SOH Key Performance Indicators
+Gijsbert Kruithof, Roope Tervo, Stuart J. Matthews, Steffen Kremer, Lasse Latva, Morten W. Hansen.
+
+[discrete]
+== Abstract
+
+This document defines KPIs for the E-SOH system. The target of the KPIs is to provide guidance for system design and operations to ensure correct level of availability and usability of the system and data.
+
+toc::[]
+
+[discrete]
+== Revision history
+
+[cols=",,,",]
+|=======================================================================
+|Version |Date |Comment |Responsible
+
+|1.0 |2023-04-28 |First version |Morten W. Hansen
+
+|=======================================================================
+
+
+
+

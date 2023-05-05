@@ -1,2 +1,6 @@
 e-soh-kpis-doc.html
 pandoc.TMP
+.vagrant/
+html/
+pdf/
+*.log
