@@ -1,6 +1,6 @@
 # e-soh-kpis
 
-E-SOH Key Performance Indicators
+[E-SOH Key Performance Indicators](https://eurodeo.github.io/e-soh-kpis/).
 
-**THIS DOCUMENT IS A DRAFT**
+
 
