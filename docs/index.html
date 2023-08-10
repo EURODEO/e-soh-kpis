@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.18">
+<meta name="generator" content="Asciidoctor 2.0.20">
 <meta name="author" content="Gijsbert Kruithof, Roope Tervo, Stuart J. Matthews, Steffen Kremer, Lasse Latva, Morten W. Hansen.">
 <title>E-SOH Key Performance Indicators</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -209,13 +209,10 @@ table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
-.exampleblock>.content>:first-child{margin-top:0}
-.exampleblock>.content>:last-child{margin-bottom:0}
 .sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
-.sidebarblock>:first-child{margin-top:0}
-.sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
-.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
 .literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
@@ -394,7 +391,7 @@ b.conum *{color:inherit!important}
 dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
 h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
 p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
 .exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
@@ -447,22 +444,30 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_introduction">1. Introduction</a></li>
-<li><a href="#_data_consumers">2. Data Consumers</a>
+<li><a href="#_service_level_definitions">2. Service Level Definitions</a></li>
+<li><a href="#_kpis_for_data_consumption">3. KPIs for Data Consumption</a>
 <ul class="sectlevel2">
-<li><a href="#_discussion">2.1. Discussion</a></li>
+<li><a href="#_search_and_access_apis">3.1. Search and Access APIs</a>
+<ul class="sectlevel3">
+<li><a href="#_discussion">3.1.1. Discussion</a></li>
 </ul>
 </li>
-<li><a href="#_stakeholders">3. Stakeholders</a>
-<ul class="sectlevel2">
-<li><a href="#_discussion_2">3.1. Discussion</a></li>
+<li><a href="#_notification_service">3.2. Notification Service</a>
+<ul class="sectlevel3">
+<li><a href="#_discussion_2">3.2.1. Discussion</a></li>
 </ul>
 </li>
-<li><a href="#_data_ingest">4. Data Ingest</a>
-<ul class="sectlevel2">
-<li><a href="#_discussion_3">4.1. Discussion</a></li>
 </ul>
 </li>
-<li><a href="#_data_and_metadata">5. Data and metadata</a></li>
+<li><a href="#_kpis_for_data_provisioning">4. KPIs for Data Provisioning</a>
+<ul class="sectlevel2">
+<li><a href="#_data_ingestion_apis">4.1. Data Ingestion API(s)</a>
+<ul class="sectlevel3">
+<li><a href="#_discussion_3">4.1.1. Discussion</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -497,6 +502,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock">First version</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Morten W. Hansen</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yyyy-mm-dd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adjustment to RODEO needs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Morten W. Hansen</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -505,16 +516,25 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_introduction"><a class="anchor" href="#_introduction"></a>1. Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This document defines KPIs for the E-SOH system. The target of the KPIs is to provide guidance for system design and operations to ensure correct level of availability and usability of the system and data.</p>
+<p>This document defines KPIs for the E-SOH system. The target of the KPIs is to
+provide guidance for system design and operations to ensure correct level of
+availability and usability of the system and data.  E-SOH requirement F07
+states that the EUMETNET members want monthly, quarterly, and annual reports of
+the performance, against (to be confirmed) agreed KPIs.</p>
 </div>
 <div class="paragraph">
-<p>KPIs aim to be as simple as possible, containing only few automatically collected metrics.</p>
+<p>The KPIs are measurable and aim to be as simple as possible, containing only
+few automatically collected metrics.</p>
 </div>
 <div class="paragraph">
-<p>KPIs should not be confused with requirements nor monitoring. Requirements defines clear lower/upper bounds while KPIs target a goal. Monitoring is used to ensure that the system is operating as expected, to detect anomalies and to trace root cause of the potential problems.</p>
+<p>KPIs should not be confused with requirements nor monitoring. Requirements
+defines clear lower/upper bounds while KPIs target a goal. Monitoring is used
+to ensure that the system is operating as expected, to detect anomalies and to
+trace root cause of the potential problems.</p>
 </div>
 <div class="paragraph">
-<p>In the process of establishing the KPIs the following sources and examples are taken into consideration:</p>
+<p>In the process of establishing the KPIs the following sources and examples are
+taken into consideration:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -547,10 +567,40 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_data_consumers"><a class="anchor" href="#_data_consumers"></a>2. Data Consumers</h2>
+<h2 id="_service_level_definitions"><a class="anchor" href="#_service_level_definitions"></a>2. Service Level Definitions</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Data consumers KPIs define the targets from the perspective of the data consumers of the real-time observations.</p>
+<p>The EU HVD Regulation, Article 3 defines: "Set out and publish the terms of use of the API and the quality of service criteria on its performance, capacity and availability". This section defines three service levels to use as reference in the KPI definitions:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Best effort – business hours:</strong> Solution with support on best effort basis, on business hours. The solution has a limited capacity to operate big and several parallel inquires. Error cases fixed within 2 weeks. Simple monitoring checks. Capabilities can be developed further, according to FAIR.</p>
+</li>
+<li>
+<p><strong>Immediate response – fixes in 24 hours:</strong> Higher system performance with moderate service level. More advanced automatic monitoring checks and alerts, 24/7 first level support, and the ability to give human support in 24 hours. Error cases fixed within a week. Capabilities can be developed further, according to FAIR.</p>
+</li>
+<li>
+<p><strong>Time critical – fixes in an hour:</strong> Operational international data exchange for model input. 24/7 first, second and third level support, efficient monitoring tools detecting any errors, high availability, and capacity to process data. Capabilities can be developed further, according to FAIR.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kpis_for_data_consumption"><a class="anchor" href="#_kpis_for_data_consumption"></a>3. KPIs for Data Consumption</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The KPIs for Data Consumption define the target KPIs from the perspective of
+the data consumers of real-time observations. In the
+<a href="https://rodeo-project.eu/e-soh-technical-architecture/#_container_diagram">E-SOH
+technical architecture</a>, this corresponds to the Search and Access APIs, and
+the Notification Service.</p>
+</div>
+<div class="sect2">
+<h3 id="_search_and_access_apis"><a class="anchor" href="#_search_and_access_apis"></a>3.1. Search and Access APIs</h3>
+<div class="paragraph">
+<p><strong>Recommended Service Level:</strong> "Immediate response – fixes in 24 hours", in the pre-operational phase.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -570,21 +620,21 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">KPI-1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API availability</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API availability measured from independent system. The check has to request for latest data and ensure that the returned data is what&#8217;s expected. Initially only 99% because of office hours support.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Availability</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The check has to request for latest data and ensure that the returned data is in accordance with the expected one.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">99%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Related to requirement F02</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">KPI-2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API response time</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">How fast API starts the response.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Response time</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">How fast the API starts the response.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">KPI-3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Number of API requests</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of requests per hour</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The number API requests reflect the usability of the service</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -598,65 +648,85 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">KPI-5</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Number of unique API users</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of unique users</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The number of unique users</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">KPI-6</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Number of subscribers to the notification service</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Number of subscriptions to MQTT pub/sub notifications</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Quality of WIS 2.0 metadata records</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WIS metadata records KPIs score</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Metadata quality can be quantified with tooling available at <a href="https://github.com/wmo-im/pywcmp" class="bare">https://github.com/wmo-im/pywcmp</a>. For more information, see: <a href="https://community.wmo.int/en/activity-areas/wis/wis-metadata-kpis">WMO WIS metadata KPIs</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">KPI-7</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Number of successfully processed PUBLISH messages</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Succesfully processed MQTT notifications</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">KPI-8</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Publish delay</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">the time interval starts when a PUBLISH message is sent and ends when the corresponding PUBACK (QoS1) message has been received</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Quality of HVD metadata records</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HVD metadata records KPIs score</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
+<div class="sect3">
+<h4 id="_discussion"><a class="anchor" href="#_discussion"></a>3.1.1. Discussion</h4>
 <div class="paragraph">
-<p>KPIs 6-8 on the MQTT pub/sub mechanism also depend on the overall FEMDI Architecture and especially RODEO Work Package 2.</p>
+<p>This section aims to provide the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Justification of the service level suggestion</p>
+</li>
+<li>
+<p>Indication of any consequences for data providers</p>
+</li>
+<li>
+<p>Indication of cost expectations</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ideally, the target of KPI-target would support the global NWP model
+simulations. They typically run every 6 hours, whereas local area models run
+every 15-60 minutes.  For example, the IFS
+<a href="https://www.ecmwf.int/en/newsletter/158/meteorology/continuous-data-assimilation-ifs">continuous
+assimilation model</a> runs every 60 minutes.</p>
+</div>
+<div class="paragraph">
+<p>The NWP models can be run without the latest observations, but this has a
+significant impact on the quality. Hence, less than 60 minutes of downtime is
+desired. However, E-SOH will initially only support 99% availability in order
+to meet the "immediate response" service level. Higher availability would
+require the "time critical" service level.</p>
+</div>
+<div class="paragraph">
+<p>The KPI-2 and KPI-3 targets should be derived from time-critical applications
+such as, e.g., thunderstorm monitoring or marine traffic control. Notably, open
+data API is <em>not to provide</em> QoS promise for the end user applications but to
+exchange data.</p>
+</div>
+<div class="paragraph">
+<p>KPI-5 Number of unique API users. If this can be measured via registration or
+using fingerprint (e.g. combination of IP address, user-agent, operating
+system, and referrer). TBD after start of operations. Maybe the number of
+subscribers to the notification service (KPI-8) is easier to measure and gives
+an equally good indication.</p>
+</div>
+<div class="paragraph">
+<p>KPIs 6 and 7 highlights the need for interoperability, and a consequential
+requirement on data providers to deliver their data on agreed formats with a
+minimum amount of metadata following an agreed format (currently the Attribute
+Convention for Data Discovery [ACDD] with possible extensions, and the Climate
+and Forecast (CF) variables).</p>
+</div>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_discussion"><a class="anchor" href="#_discussion"></a>2.1. Discussion</h3>
+<h3 id="_notification_service"><a class="anchor" href="#_notification_service"></a>3.2. Notification Service</h3>
 <div class="paragraph">
-<p>Ideally the KPI-1 target would support the of the global NWP models. They typically run every 6 hours and local area models every 15-60 minutes.
-For example IFS <a href="https://www.ecmwf.int/en/newsletter/158/meteorology/continuous-data-assimilation-ifs">continuous assimilation model</a> waits for 60 minutes.
-The models can be run without the latest obseravtions with significant impact on the quality. Hence, under 60 minutes of downtime is desired.
-Initially E-SOH will only support 99% availability because support is only available in office hours. If 99.9% or higher availability is demanded 24/7 support is needed.</p>
-</div>
-<div class="paragraph">
-<p>KPI-2 and KPI-3 target should be derived from time-critical applications such as thunderstorm monitoring or marine traffic control (just to name some examples). Notably, open data API is <em>not to provide</em> QoS promise for the end user applications but to exchange data.</p>
-</div>
-<div class="paragraph">
-<p>KPI-5 Number of unique API users. If this can be measured via registration or using fingerprint (e.g. combination of IP address, user-agent, operating system, and referrer). TBD after start of operations. Maybe the number of subscribers to the notification service (KPI-6) is easier to measure and gives an equally good indication</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_stakeholders"><a class="anchor" href="#_stakeholders"></a>3. Stakeholders</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This section describes the KPIs that define the target from the perspective of the important stakeholders.
-Most important identified stakeholders are:
-* RODEO project and partners
-* EUMETNET, including FEMDI Expert Team</p>
-</div>
-<div class="paragraph">
-<p>Requirement F07 states that the EUMETNET members want monthly, quarterly, and annual reports of the performance, against (to be confirmed) agreed KPIs.</p>
+<p><strong>Recommended Service Level:</strong> Immediate response – fixes in 24 hours, in the pre-operational phase.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -675,40 +745,66 @@ Most important identified stakeholders are:
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Notes</strong></p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">KPI-8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of subscribers to the Notification Service</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of subscriptions to MQTT pub/sub notifications</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">KPI-9</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Number of data providing organisations</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(Mainly) NMHSs providing data in E-SOH</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of successfully processed PUBLISH messages</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Succesfully processed MQTT notifications</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">KPI-10</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Amount of Weather Stations available via the API</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Combined with the providing organisations</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No target value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publish delay</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the time interval starts when a PUBLISH message is sent and ends when the corresponding PUBACK (QoS1) message has been received</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
-<div class="sect2">
-<h3 id="_discussion_2"><a class="anchor" href="#_discussion_2"></a>3.1. Discussion</h3>
 <div class="paragraph">
-<p>Internal use of the NMHSs need to be reported as a special case as it is in special interest of the EUMETNET Member States and providing organisations. The KPIs and the targe figures should be the same.</p>
+<p>KPIs 8-10 on the MQTT pub/sub mechanism also depend on the overall FEMDI Architecture and especially RODEO Work Package 2.</p>
 </div>
+<div class="sect3">
+<h4 id="_discussion_2"><a class="anchor" href="#_discussion_2"></a>3.2.1. Discussion</h4>
 <div class="paragraph">
-<p>KPI-9 target figure is derived from assumption that all EUMETNET Member States would provide data through E-SOH.</p>
+<p>This section aims to provide the following:</p>
 </div>
-<div class="paragraph">
-<p>KPI-10. There is an assumption that EUMETNET Members will provide data from as many automatic weather stations (AWS) as possible. This is in contrast to only a sub-set of the total number of AWS stations being shared through the GTS. The actual number of stations from each Member is are not know at present, but a KPI to reflect the inclusion of additional stations is highly desireable.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Justification of the service level suggestion</p>
+</li>
+<li>
+<p>Indication of any consequences for data providers</p>
+</li>
+<li>
+<p>Indication of cost expectations</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_data_ingest"><a class="anchor" href="#_data_ingest"></a>4. Data Ingest</h2>
+<h2 id="_kpis_for_data_provisioning"><a class="anchor" href="#_kpis_for_data_provisioning"></a>4. KPIs for Data Provisioning</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The KPIs in this section define the targets of the system seen from the perspective of the data providers, i.e. the NMHS&#8217;s.</p>
+<p>The KPIs for Data Provisioning define the target KPIs for the data provisioning
+system, initially used by the NMHS&#8217;es. In the
+<a href="https://rodeo-project.eu/e-soh-technical-architecture/#_container_diagram">E-SOH
+technical architecture</a>, this corresponds to the Data Ingestion API(s).</p>
+</div>
+<div class="sect2">
+<h3 id="_data_ingestion_apis"><a class="anchor" href="#_data_ingestion_apis"></a>4.1. Data Ingestion API(s)</h3>
+<div class="paragraph">
+<p><strong>Recommended Service Level:</strong> "Immediate response – fixes in 24 hours", in the pre-operational phase.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -728,34 +824,48 @@ Most important identified stakeholders are:
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">KPI-11</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Amount of data ingested</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Gives an indication of the scale of the ingest system</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of data providers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(Mainly) NMHS&#8217;es providing data in E-SOH</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">KPI-12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of Weather Stations</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Combined with the providing organisations</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No target value</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">KPI-13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amount of data ingested</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gives an indication of the scale of the ingestion system</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">KPI-14</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ingestion system uptime</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The uptime of the ingestion system</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">99%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Please note: this can be different than the uptime of the API for the end-user</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">KPI-13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">KPI-15</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ingestion success rate</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The percentage of data succesfully ingested</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">99.95%</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Please note: rejected files which do not comply to the input standards are not counted as an unsuccesfull ingest</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">KPI-14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">KPI-16</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ingestion timeliness</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Processing time from "inserted in system" to "notification send out to destination"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Processing time from "inserted in system" to "notification sent out to destination"</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&lt; 1 minute</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">See Requirement F03</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">KPI-15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">KPI-17</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Data transformation success rate</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The percentage of BUFR and CSV files that is succesfully transformed by the system</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">100%</p></td>
@@ -763,54 +873,55 @@ Most important identified stakeholders are:
 </tr>
 </tbody>
 </table>
-<div class="sect2">
-<h3 id="_discussion_3"><a class="anchor" href="#_discussion_3"></a>4.1. Discussion</h3>
+<div class="sect3">
+<h4 id="_discussion_3"><a class="anchor" href="#_discussion_3"></a>4.1.1. Discussion</h4>
 <div class="paragraph">
-<p>KPI-14: <a href="https://space.oscar.wmo.int/requirements">OSCAR requirements</a> defines detailed requirements for each parameters. For the sake of simplicity the shortest timeliness of ground observations (apart from some aviation parameters and lightning) was chosen to as KPI.</p>
+<p>This section aims to provide the following:</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>Justification of the service level suggestion</p>
+</li>
+<li>
+<p>Indication of any consequences for data providers</p>
+</li>
+<li>
+<p>Indication of cost expectations</p>
+</li>
+</ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_data_and_metadata"><a class="anchor" href="#_data_and_metadata"></a>5. Data and metadata</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>The KPI in this section defines the target of the system with regard to the metadata quality</p>
+<p>Internal use of the NMHSs need to be reported as a special case as it is in
+special interest of the EUMETNET Member States and providing organisations. The
+KPIs and the target figures should be the same.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 12.5%;">
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ID</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>KPI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Target</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Notes</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">KPI-16</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Metadata quality</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">WIS metadata KPI to provide a quantitative assessment of the quality of the metadata records</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Metadata quality can be quantified with tooling available at <a href="https://github.com/wmo-im/pywcmp" class="bare">https://github.com/wmo-im/pywcmp</a></p></td>
-</tr>
-</tbody>
-</table>
 <div class="paragraph">
-<p>For more information, see: <a href="https://community.wmo.int/en/activity-areas/wis/wis-metadata-kpis">WMO WIS metadata KPIs</a>.</p>
+<p>The KPI-10 target is derived from an assumption that all EUMETNET Member States
+will provide data through E-SOH.</p>
+</div>
+<div class="paragraph">
+<p>Regarding KPI-12, there is an assumption that EUMETNET Members will provide
+data from as many automatic weather stations (AWS) as possible. This is in
+contrast to only a sub-set of the total number of AWS stations being shared
+through the GTS. The actual number of stations from each Member is not known at
+present, but a KPI to reflect the inclusion of additional stations is highly
+desirable.</p>
+</div>
+<div class="paragraph">
+<p>KPI-16: <a href="https://space.oscar.wmo.int/requirements">OSCAR requirements</a>
+defines detailed requirements for each parameters. For the sake of simplicity
+the shortest timeliness of ground observations (apart from some aviation
+parameters and lightning) was chosen.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-05-05 10:32:00 UTC
+Last updated 2023-08-10 15:03:39 UTC
 </div>
 </div>
 </body>
