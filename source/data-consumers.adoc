@@ -69,6 +69,7 @@ and Forecast (CF) variables).
 |KPI-8|Number of subscribers to the Notification Service|Number of subscriptions to MQTT pub/sub notifications|TBD|
 |KPI-9|Number of successfully processed PUBLISH messages|Succesfully processed MQTT notifications|TBD|
 |KPI-10|Publish delay|the time interval starts when a PUBLISH message is sent and ends when the corresponding PUBACK (QoS1) message has been received|TBD|
+|KPI-11|Quality of MQTT messages|MQTT KPIs score |TBD |
 |=========================
 
 KPIs 8-10 on the MQTT pub/sub mechanism also depend on the overall FEMDI Architecture and especially RODEO Work Package 2.
