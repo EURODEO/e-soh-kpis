@@ -1,31 +1,83 @@
-== Data Consumers
+== KPIs for Data Consumption
 
-Data consumers KPIs define the targets from the perspective of the data consumers of the real-time observations. 
+The KPIs for Data Consumption define the target KPIs from the perspective of
+the data consumers of real-time observations. In the
+link:https://rodeo-project.eu/e-soh-technical-architecture/#_container_diagram[E-SOH
+technical architecture], this corresponds to the Search and Access APIs, and
+the Notification Service.
+
+=== Search and Access APIs
+
+**Recommended Service Level:** "Immediate response – fixes in 24 hours", in the pre-operational phase.
 
 [cols="1,2,3,1,1"]
 |=========================
 |*ID* |*KPI* |*Description* |*Target* |*Notes*
-|KPI-1 |API availability |API availability measured from independent system. The check has to request for latest data and ensure that the returned data is what's expected. Initially only 99% because of office hours support. |99% |Related to requirement F02
-|KPI-2|API response time|How fast API starts the response.|TBD|
-|KPI-3|Number of API requests|The number API requests reflect the usability of the service|TBD|
-|KPI-4|Amount of data downloaded|The amount of data downloaded indicates the usability of the data|TBD|
-|KPI-5|Number of unique API users|The number of unique users|TBD|
-|KPI-6|Number of subscribers to the notification service|Number of subscriptions to MQTT pub/sub notifications|TBD|
-|KPI-7|Number of successfully processed PUBLISH messages|Succesfully processed MQTT notifications|TBD|
-|KPI-8|Publish delay|the time interval starts when a PUBLISH message is sent and ends when the corresponding PUBACK (QoS1) message has been received|TBD|
+|KPI-1 |Availability |The check has to request for latest data and ensure that the returned data is in accordance with the expected one. |99% |Related to requirement F02
+|KPI-2|Response time|How fast the API starts the response.|TBD |
+|KPI-3|Number of requests per hour |The number API requests reflect the usability of the service|TBD|
+|KPI-4|Amount of data downloaded |The amount of data downloaded indicates the usability of the data|TBD|
+|KPI-5|Number of unique users |The number of unique users|TBD|
+|KPI-6|Quality of WIS 2.0 metadata records |WIS metadata records KPIs score|TBD |Metadata quality can be quantified with tooling available at https://github.com/wmo-im/pywcmp. For more information, see: link:https://community.wmo.int/en/activity-areas/wis/wis-metadata-kpis[WMO WIS metadata KPIs].
+|KPI-7|Quality of HVD metadata records|HVD metadata records KPIs score |TBD |
 |=========================
 
-KPIs 6-8 on the MQTT pub/sub mechanism also depend on the overall FEMDI Architecture and especially RODEO Work Package 2.
+==== Discussion
 
-=== Discussion
+This section aims to provide the following:
 
-Ideally the KPI-1 target would support the of the global NWP models. They typically run every 6 hours and local area models every 15-60 minutes. 
-For example IFS link:https://www.ecmwf.int/en/newsletter/158/meteorology/continuous-data-assimilation-ifs[continuous assimilation model] waits for 60 minutes. 
-The models can be run without the latest obseravtions with significant impact on the quality. Hence, under 60 minutes of downtime is desired.
-Initially E-SOH will only support 99% availability because support is only available in office hours. If 99.9% or higher availability is demanded 24/7 support is needed.  
+* Justification of the service level suggestion
+* Indication of any consequences for data providers
+* Indication of cost expectations
 
-KPI-2 and KPI-3 target should be derived from time-critical applications such as thunderstorm monitoring or marine traffic control (just to name some examples). Notably, open data API is _not to provide_ QoS promise for the end user applications but to exchange data. 
+Ideally, the target of KPI-target would support the global NWP model
+simulations. They typically run every 6 hours, whereas local area models run
+every 15-60 minutes.  For example, the IFS
+link:https://www.ecmwf.int/en/newsletter/158/meteorology/continuous-data-assimilation-ifs[continuous
+assimilation model] runs every 60 minutes. 
 
+The NWP models can be run without the latest observations, but this has a
+significant impact on the quality. Hence, less than 60 minutes of downtime is
+desired. However, E-SOH will initially only support 99% availability in order
+to meet the "immediate response" service level. Higher availability would
+require the "time critical" service level.
 
-KPI-5 Number of unique API users. If this can be measured via registration or using fingerprint (e.g. combination of IP address, user-agent, operating system, and referrer). TBD after start of operations. Maybe the number of subscribers to the notification service (KPI-6) is easier to measure and gives an equally good indication 
+The KPI-2 and KPI-3 targets should be derived from time-critical applications
+such as, e.g., thunderstorm monitoring or marine traffic control. Notably, open
+data API is _not to provide_ QoS promise for the end user applications but to
+exchange data. 
 
+KPI-5 Number of unique API users. If this can be measured via registration or
+using fingerprint (e.g. combination of IP address, user-agent, operating
+system, and referrer). TBD after start of operations. Maybe the number of
+subscribers to the notification service (KPI-8) is easier to measure and gives
+an equally good indication.
+
+KPIs 6 and 7 highlights the need for interoperability, and a consequential
+requirement on data providers to deliver their data on agreed formats with a
+minimum amount of metadata following an agreed format (currently the Attribute
+Convention for Data Discovery [ACDD] with possible extensions, and the Climate
+and Forecast (CF) variables).
+
+=== Notification Service
+
+**Recommended Service Level:** Immediate response – fixes in 24 hours, in the pre-operational phase.
+
+[cols="1,2,3,1,1"]
+|=========================
+|*ID* |*KPI* |*Description* |*Target* |*Notes*
+|KPI-8|Number of subscribers to the Notification Service|Number of subscriptions to MQTT pub/sub notifications|TBD|
+|KPI-9|Number of successfully processed PUBLISH messages|Succesfully processed MQTT notifications|TBD|
+|KPI-10|Publish delay|the time interval starts when a PUBLISH message is sent and ends when the corresponding PUBACK (QoS1) message has been received|TBD|
+|KPI-11|Quality of MQTT messages|MQTT KPIs score |TBD |
+|=========================
+
+KPIs 8-10 on the MQTT pub/sub mechanism also depend on the overall FEMDI Architecture and especially RODEO Work Package 2.
+
+==== Discussion
+
+This section aims to provide the following:
+
+* Justification of the service level suggestion
+* Indication of any consequences for data providers
+* Indication of cost expectations

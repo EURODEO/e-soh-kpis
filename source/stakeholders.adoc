@@ -1,11 +1,13 @@
-== Stakeholders
+== KPIs toward Stakeholders
 
-This section describes the KPIs that define the target from the perspective of the important stakeholders. 
-Most important identified stakeholders are:
-* RODEO project and partners
-* EUMETNET, including FEMDI Expert Team 
+The KPIs toward stakeholders define the target KPIs from the perspective of the
+project stakeholders.  The most important stakeholders are identified as:
 
-Requirement F07 states that the EUMETNET members want monthly, quarterly, and annual reports of the performance, against (to be confirmed) agreed KPIs.
+* The RODEO project and its partners
+* EUMETNET, including the FEMDI Expert Team 
+
+Requirement F07 states that the EUMETNET members want monthly, quarterly, and
+annual reports of the performance, against (to be confirmed) agreed KPIs.
 
 [cols="1,2,3,1,1"]
 |=========================
@@ -16,7 +18,12 @@ Requirement F07 states that the EUMETNET members want monthly, quarterly, and an
 
 === Discussion
 
-Internal use of the NMHSs need to be reported as a special case as it is in special interest of the EUMETNET Member States and providing organisations. The KPIs and the targe figures should be the same. 
+This section aims to provide the following:
+
+* Indication of any consequences for data providers
+* Indication of cost expectations
+
+Internal use of the NMHSs need to be reported as a special case as it is in special interest of the EUMETNET Member States and providing organisations. The KPIs and the target figures should be the same.
 
 KPI-9 target figure is derived from assumption that all EUMETNET Member States would provide data through E-SOH. 
 
